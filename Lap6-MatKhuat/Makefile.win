@@ -1,0 +1,29 @@
+# Project: KhuMatKhuat
+# Makefile created by Dev-C++ 5.4.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = khu_mat_sau_Cube.o
+LINKOBJ  = khu_mat_sau_Cube.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc "C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/libglu32.a" "C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/libglut32.a" "C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/libopengl32.a" 
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
+BIN      = KhuMatKhuat.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+khu_mat_sau_Cube.o: khu_mat_sau_Cube.cpp
+	$(CPP) -c khu_mat_sau_Cube.cpp -o khu_mat_sau_Cube.o $(CXXFLAGS)
