@@ -1,2 +1,2 @@
-# -H-a-M-y-T-nh
+#Do_hoa_may_tinh
 Computer graphic
